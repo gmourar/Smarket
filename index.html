@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-fPM8ZzFcz9D+Akupq3i5onG8yec5Bp0M0SSio01RCDrdi1zZQDLXQTvP3Jyy5B" crossorigin="anonymous">
+    <script src="jsmarket.js"></script>
+    <title>Smarket.co</title>
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary fixed-top" style="z-index: 999;">
+    <div class="container-fluid col-11 m-auto">
+      
+      <a><img src="logoteste.png" alt="Logo" width="40" height="24" class="d-inline-block align-text-top"></a>
+    
+      <style>
+       
+        a:hover {
+          font-size: 1.4em; 
+          transition: font-size 0.3s ease-in-out;
+          cursor: pointer;
+          
+        }
+        
+        
+      </style>
+      <a class="navbar-brand" href="#">Smarket</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Smarket</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active " aria-current="page" href="#"><i class="fas fa-shopping-cart"></i>Meu Carrinho</a>
+            </li>
+
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Meu perfil
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Cadastre-se</a></li>
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search" id="formBusca">
+            <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search " id="inputBusca">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+            <div id="resultadosBusca"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+  
+  </nav>
+  
+<div id="carouselExampleIndicators" class="carousel slide col-lg-12">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="carossel1.webp" class="img-fluid" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="carrossel2.webp" class="img-fluid w-100 h-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="carrossel3.webp" class="img-fluid w-100 h-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<div class="container">
+  
+  <div class="row">
+    <div class="col-md-6 mt-4">
+      
+      
+      <a><h1 class="fw-light">Ofertas</h1></a>
+    </div>
+   
+  </div>
+</div>
+
+
+  <div class="row row-cols-1 row-cols-md-4 g-4 col-10 m-auto mx-auto">
+    <div class="col">
+      <div class="card col-11" style="border: 3px solid gray;">
+        <img src="Batata.png" class="card-img-top mx-auto my-4" alt="..." style="width: 50%; height: auto; ">
+        <div class="card-body">
+          <h5 class="card-title ">Batata</h5>
+          <p class="card-text">10 PILA A UNIDADE IRMAO</p>
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Adicionar ao Carrinho
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Produto adcionado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O produto selecionado foi adiconado ao carinho!
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col">
+      <div class="card col-11" style="border: 3px solid gray;">
+        <img src="Batata.png" class="card-img-top mx-auto my-4" alt="Batata" style="width: 50%; height: auto; ">
+        <div class="card-body">
+          <h5 class="card-title ">Batata</h5>
+          <p class="card-text">10 PILA A UNIDADE IRMAO</p>
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Adicionar ao Carrinho
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Produto adcionado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O produto selecionado foi adiconado ao carinho!
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card col-11" style="border: 3px solid gray;">
+        <img src="Batata.png" class="card-img-top mx-auto my-4" alt="..." style="width: 50%; height: auto; ">
+        <div class="card-body">
+          <h5 class="card-title ">Batata</h5>
+          <p class="card-text">10 PILA A UNIDADE IRMAO</p>
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Adicionar ao Carrinho
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Produto adcionado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O produto selecionado foi adiconado ao carinho!
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+         
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card col-11" style="border: 3px solid gray;">
+        <img src="Batata.png" class="card-img-top mx-auto my-4" alt="..." style="width: 50%; height: auto; ">
+        <div class="card-body">
+          <h5 class="card-title ">Batata</h5>
+          <p class="card-text">10 PILA A UNIDADE IRMAO</p>
+        
+            <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Adicionar ao Carrinho
+            </button>
+        </div>
+      </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Produto adcionado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O produto selecionado foi adiconado ao carinho!
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+          
+          
+            
+            
+           
+          
+        
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container">
+  
+    <div class="row">
+      <div class="col-md-6 mt-4">
+        
+        
+        <a><h1 class="fw-light">Bebidas</h1></a>
+      </div>
+     
+    </div>
+  </div>
+<div class="row row-cols-1 row-cols-md-4 g-4 col-10 m-auto mx-auto">
+    <div class="col">
+      <div class="card col-11" style="border: 3px solid red;">
+        <img src="Batata.png" class="card-img-top mx-auto my-4" alt="..." style="width: 50%; height: auto; ">
+        <div class="card-body">
+          <h5 class="card-title ">Batata</h5>
+          <p class="card-text">10 PILA A UNIDADE IRMAO</p>
+          <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Adicionar ao Carrinho
+             
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Produto adcionado!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        O produto selecionado foi adiconado ao carinho!
+      </div>
+      <div class="modal-footer">
+        
+      <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+
+
+
+
+
+    
+ 
+        
+        
+
+           
+  
+    
+   
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"
+
+
+
+
+
+
+></script>
+
+</html>
