@@ -172,9 +172,9 @@
       </div>
     </div>
   </div>
-  <button type="button" class="btn btn-outline-dark rounded-start-pill"
+  <button type="button" class="btn btn-outline-dark rounded-start-pill" data-bs-target="#vermaisofertas" data-bs-toggle="modal"
       style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left: auto;">
-Ver mais
+Ver mais ofertas
 </button>
 </div>
 <!-- Modal -->
@@ -265,9 +265,9 @@ Ver mais
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-danger rounded-start-pill"  data-bs-target="#vermais" data-bs-toggle="modal"
+    <button type="button" class="btn btn-outline-danger rounded-start-pill"  data-bs-target="#vermaisbebidas" data-bs-toggle="modal"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left: auto;">
-  Ver mais
+  Ver mais bebidas
 </button>
 </div>
 <!-- Modal -->
@@ -289,7 +289,29 @@ Ver mais
     </div>
   </div>
 </div>
-<div class="modal fade" id="vermais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="vermaisbebidas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Busque pelo seu produto!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="d-flex mt-3" role="search" id="formBusca">
+          <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search " id="inputBusca">
+          <button class="btn btn-outline-danger" type="submit">Buscar</button>
+          <div id="resultadosBusca"></div>
+        </form>
+      </div>
+      
+      <div class="modal-footer ">
+        
+      <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="vermaisofertas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
