@@ -265,7 +265,7 @@ Ver mais
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-outline-danger rounded-start-pill"
+    <button type="button" class="btn btn-outline-danger rounded-start-pill"  data-bs-target="#vermais" data-bs-toggle="modal"
         style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left: auto;">
   Ver mais
 </button>
@@ -285,6 +285,28 @@ Ver mais
       <div class="modal-footer ">
         
       <button type="button" class="btn btn-outline-danger " data-bs-dismiss="modal">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="vermais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Busque pelo seu produto!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="d-flex mt-3" role="search" id="formBusca">
+          <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search " id="inputBusca">
+          <button class="btn btn-outline-dark" type="submit">Buscar</button>
+          <div id="resultadosBusca"></div>
+        </form>
+      </div>
+      
+      <div class="modal-footer ">
+        
+      <button type="button" class="btn btn-outline-dark " data-bs-dismiss="modal">Confirmar</button>
       </div>
     </div>
   </div>
