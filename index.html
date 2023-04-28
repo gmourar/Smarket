@@ -49,7 +49,7 @@
                 Meu perfil
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Entre</a></li>
+                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#entre">Entre</a></li>
                 <li>
                   <hr class="dropdown-divider">
                   
@@ -160,7 +160,42 @@
     </div>
   </div>
 </div>
-  
+<div class="modal fade" id="entre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Faça seu Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Manter Conectado</label>
+          </div>
+          <button type="submit" class="btn btn-outline-dark">Entrar</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="1500">
@@ -256,7 +291,7 @@
       style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left: auto;">
 Ver mais ofertas
 </button>
-</div>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog">
