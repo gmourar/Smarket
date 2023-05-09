@@ -1,136 +1,19 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif ;
+  
   box-sizing: border-box;
 }
 
 
 
-.hea{
-  height: 100vh;
-  width: 100%;
-  background-image: url(degrad.png);
-  background-position: center;
+.unidades {
+  
   background-size: cover;
-  
-  
-}
-hr{
-color: #251D3A;
-}
-span{
-color: #2A2550;
-}
-nav{
-display: flex;
-align-items: flex;
-justify-content: space-between;
-padding-top: 1rem;
-padding-left: 5%;
-padding-right: 5%;
-}
-
-.logo{
-  width: 20%;
-}
-
-nav ul li{
-  list-style: none;
-  display: inline-flex;
-  padding: 73px 35px;
-}
-nav ul li a{
-  color: whitesmoke;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: capitalize;
-}
-nav ul li a:hover{
-transform: scale(1.2);
-  transition: 1.4s;
-  color: #2A2550;
-}
-
-.sobre{
-width: 100%;
-padding: 100px 0px;
-background-color: #f5eac1;}
-
-.main{
-  width:  30rem;
-  max-width: 95%;
-  margin: 0 auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;}
-
-  .sobre-texto h2{
-    color: #251D3A;
-    font-size: 75px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-
 }
-.sobre-texto h5{
-    color: #251D3A;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.sobre-texto p{
-    color: #251D3A ;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;}
-    button{
-      background-color: #251D3A ;
-      text-decoration: none;
-      color: whitesmoke;
-      padding: 13px 30px;
-      font-weight: bold;
-      border-radius: 30px;
-      transition: .4s;
-  
-  }
-  button:hover{
-      background-color: #f5eac1;
-      border: 2px solid #251D3A;
-      cursor: pointer;
-      color: #E04D01;
-      background-color: transparent;}
-
-      .promo{
-        background: #f5eac1;
-        width: 100%;
-        padding: 100px 0px;}
-
-        .titulo{
-          color: #E04D01;
-          font-size: 40px;
-          width: 1130px;
-          margin: 30px auto;
-          text-align: center;
-      
-        }
-        .box{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          min-height: 400px;
-        }
-        .card{
-          height: 20%px;
-          width: 20%;
-          
-          background: #E04D01;
-          border-radius: 20px;
-          margin: 15px;
-          position: relative;
-          overflow: hidden;
-          text-align: center;
-          margin-top: 75px;}
-    
-          
