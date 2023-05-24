@@ -117,6 +117,7 @@
               Parece bom!
             </div>
           </div>
+          
           <div class="col-md-4">
             <label for="validationCustomUsername" class="form-label">Nome de usuário</label>
             <div class="input-group has-validation">
@@ -178,8 +179,8 @@
       <div class="modal-body">
         <form>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1" class="form-label">Usuário</label>
+            <input type="text" class="form-control" id="text" aria-describedby="emailHelp">
             
           </div>
           <div class="mb-3">
@@ -188,9 +189,9 @@
           </div>
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Manter Conectado</label>
+            <label class="form-check-label" for="exampleCheck1">Manter-me conectado</label>
           </div>
-          <button type="submit" class="btn btn-outline-dark">Entrar</button>
+          <button type="submit" class="btn btn-outline-dark" id="entraruser" name="entraruser" onclick="user()">Entrar</button>
         </form>
       </div>
       <div class="modal-footer">
@@ -488,21 +489,18 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque um produto</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Por hoje é só :(</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form onsubmit="search(); return false;" class="d-flex mt-3" role="search" id="formBusca">
-                <input class="form-control me-2" type="search" placeholder="Procurar produto" aria-label="Search " id="inputBusca" name="busca">
-                <button class="btn btn-outline-dark" type="submit">Buscar</button>
-                <div id="resultadosBusca"></div>
-              </form>
+             Por enquanto apenas esses produtos estão em oferta.
             </div>
+            
             
             <div class="modal-footer ">
               
-              <button type="button" class="btn btn-outline-dark " data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-outline-dark " data-bs-toggle="modal" data-bs-target="#exampleModal">Adicionar</button>
+              <button type="button" class="btn btn-outline-dark " data-bs-dismiss="modal">Confirmar</button>
+             
             </div>
           </div>
         </div>
@@ -679,7 +677,7 @@
                         <th scope="row">Lilian</th>
                         <td>Santos Russo</td>
                         <td>922200029</td>
-                        <td>implantação do sistema operacional/Gestão Ambiental</td>
+                        <td>Implantação do sistema operacional/Gestão Ambiental</td>
                       </tr>
                       <tr>
                         <th scope="row">Wesley</th>
@@ -920,23 +918,9 @@
   }
 }
 
-$(document).ready(function() {
-      // Manipulador de evento para a mudança de página
-      $('#pagination').on('click', 'a.page-link', function(e) {
-        e.preventDefault();
-        var page = $(this).data('page');
-        
-        // Oculta todos os conteúdos
-        $('#content-container > div').hide();
-        
-        // Mostra o conteúdo da página selecionada
-        $('#content-container > div:nth-child(' + page + ')').show();
-        
-        // Atualiza a classe ativa da paginação
-        $(this).parent().addClass('active').siblings().removeClass('active');
-      });
-    });
-
+function user(){
+  alert('Usuário não encontrado')
+}
   </script>  
     
 </body>
