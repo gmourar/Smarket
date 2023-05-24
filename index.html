@@ -25,7 +25,7 @@
     
       <style>
        
-        a:hover {
+        nav a:hover {
           font-size: 1.4em; 
           transition: font-size 0.3s ease-in-out;
           cursor: pointer;
@@ -414,10 +414,12 @@
               </div>
             </div>
           </div>
+          
           <button type="button" class="btn btn-outline-dark rounded-start-pill"  data-bs-target="#vermaisbebidas" data-bs-toggle="modal"
               style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem; margin-left: auto;">
         Ver mais bebidas
-      </button>
+        </button>
+      
       </div>
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -442,7 +444,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque pelo seu produto</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque um produto</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -464,7 +466,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque pelo seu produto</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque um produto</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -486,7 +488,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque pelo seu produto</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Busque um produto</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -626,8 +628,8 @@
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, accusantium illum! Veniam suscipit iusto provident necessitatibus? Sequi neque vel, est accusantium maxime sit veritatis ipsum explicabo doloremque in sapiente vero, nulla at animi dolorum beatae iure iusto tempore optio, odit quia. Officia illo odit neque, veritatis harum eius nemo incidunt quae, in quam nulla? Cum unde id inventore neque et quaerat voluptate, ratione eligendi aliquid beatae doloribus non sapiente minus maxime praesentium, eius quae cumque. Velit sint cupiditate dolor! Voluptas, debitis expedita voluptatibus omnis sed enim similique reprehenderit modi facere laborum alias id ducimus nulla dolor, fugit voluptate, excepturi eum.</p>
             <hr>
             <div class="more text-center">
-              <button  class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">Saiba Mais</button>
-              <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+              <button  class="btn btn-outline-dark" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop">Saiba Mais</button>
+              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTop">
                 <div class="offcanvas-header">
                   <h5 class="offcanvas-title" id="offcanvasBottomLabel">Fundadores</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -917,6 +919,23 @@
     alert('Este produto encotra-se indisponível!  :(');
   }
 }
+
+$(document).ready(function() {
+      // Manipulador de evento para a mudança de página
+      $('#pagination').on('click', 'a.page-link', function(e) {
+        e.preventDefault();
+        var page = $(this).data('page');
+        
+        // Oculta todos os conteúdos
+        $('#content-container > div').hide();
+        
+        // Mostra o conteúdo da página selecionada
+        $('#content-container > div:nth-child(' + page + ')').show();
+        
+        // Atualiza a classe ativa da paginação
+        $(this).parent().addClass('active').siblings().removeClass('active');
+      });
+    });
 
   </script>  
     
